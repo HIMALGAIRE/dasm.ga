@@ -1,54 +1,62 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3459796341983642"
-     crossorigin="anonymous"></script>
-
+<html>
 <head>
-<meta charset="utf-8">
-<title>Calculator </title>
-<link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
 <body>
 
-<table class="calculator" >
-<tr>
-<td colspan="3"> <input class="display-box" type="text" id="result" disabled /> </td>
 
-<!-- clearScreen() function clears all the values -->
-<td> <input type="button" value="C" onclick="clearScreen()" id="btn" /> </td>
-</tr>
-<tr>
-<!-- display() function displays the value of clicked button -->
-<td> <input type="button" value="1" onclick="display('1')" /> </td>
-<td> <input type="button" value="2" onclick="display('2')" /> </td>
-<td> <input type="button" value="3" onclick="display('3')" /> </td>
-<td> <input type="button" value="/" onclick="display('/')" /> </td>
-</tr>
-<tr>
-<td> <input type="button" value="4" onclick="display('4')" /> </td>
-<td> <input type="button" value="5" onclick="display('5')" /> </td>
-<td> <input type="button" value="6" onclick="display('6')" /> </td>
-<td> <input type="button" value="-" onclick="display('-')" /> </td>
-</tr>
-<tr>
-<td> <input type="button" value="7" onclick="display('7')" /> </td>
-<td> <input type="button" value="8" onclick="display('8')" /> </td>
-<td> <input type="button" value="9" onclick="display('9')" /> </td>
-<td> <input type="button" value="+" onclick="display('+')" /> </td>
-</tr>
-<tr>
-<td> <input type="button" value="." onclick="display('.')" /> </td>
-<td> <input type="button" value="0" onclick="display('0')" /> </td>
 
-<!-- calculate() function evaluates the mathematical expression -->
-<td> <input type="button" value="=" onclick="calculate()" id="btn" /> </td>
-<td> <input type="button" value="*" onclick="display('*')" /> </td>
-</tr>
-</table>
+<div id="calculator" align="center">
+
+    <div>
+        <input id="screen" value="0"><br>
+    </div>
+
+    <div>
+        <button onclick="processNumberButton(this.innerHTML)">1</button>
+        <button onclick="processNumberButton(this.innerHTML)">2</button>
+        <button onclick="processNumberButton(this.innerHTML)">3</button>
+        <button onclick="processOperatorButton(this.innerHTML)" class="operator">+</button>
+    </div>
+
+    <div>
+        <button onclick="processNumberButton(this.innerHTML)">4</button>
+        <button onclick="processNumberButton(this.innerHTML)">5</button>
+        <button onclick="processNumberButton(this.innerHTML)">6</button>
+        <button onclick="processOperatorButton(this.innerHTML)" class="operator">-</button>
+    </div>
+
+    <div>
+        <button onclick="processNumberButton(this.innerHTML)">7</button>
+        <button onclick="processNumberButton(this.innerHTML)">8</button>
+        <button onclick="processNumberButton(this.innerHTML)">9</button>
+        <button onclick="processOperatorButton(this.innerHTML)" class="operator">/</button>
+    </div>
+
+    <div>
+        <button onclick="processNumberButton(this.innerHTML)">0</button>
+        <button onclick="processDecimalButton(this.innerHTML)">.</button>
+        <button onclick="processPercentageButton(this.innerHTML)">%</button>
+        <button onclick="processOperatorButton(this.innerHTML)" class="operator">x</button>
+    </div>
+
+    <div>
+        <button onclick="processNumberButton(this.innerHTML)">00</button>
+        <button onclick="processParenthesesButton(this.innerHTML)">(</button>
+        <button onclick="processParenthesesButton(this.innerHTML)">)</button>
+        <button onclick="processOperatorButton(this.innerHTML)" class="operator">^</button>
+    </div>
+
+    <div>
+        <button onclick="processResetButton()" class="reset">C</button>
+        <button onclick="processEqualsButton()" class="eval">=</button>
+    </div>
+
+</div>
 
 <script type="text/javascript" src="javascript.js"></script>
 
 </body>
-
 </html>
