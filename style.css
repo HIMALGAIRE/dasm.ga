@@ -1,43 +1,107 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+* {
 
-.calculator {
-padding: 10px;
-border-radius: 1em;
-height: 380px;
-width: 400px;
-margin: auto;
-background-color: #191b28;
-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    font: bold 100px Arial, sans-serif;
+}
+#calculator{
+
+    width: 1000px;
+    height: 1000px;
+
+    margin: 100px auto;
+    padding: 20px 20px 9px;
+
+    background: #9dd2ea;
+    border-radius: 3px;
+    box-shadow: 0px 4px #009de4, 0px 10px 15px rgba(0, 0, 0, 0.2);
 }
 
-.display-box {
-font-family: 'Orbitron', sans-serif;
-background-color: #dcdbe1;
-border: solid black 0.5px;
-color: black;
-border-radius: 5px;
-width: 100%;
-height: 65%;
+button{
+
+    width: 200px;
+    height: 100px;
+
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+
+    margin: 0 7px 11px 0;
+
+    color: #888;
+    line-height: 36px;
+    text-align: center;
+
+}
+button.operator
+{
+    background: #FFF0F5;
+    margin-right: 0;
+}
+button.reset{
+    width: 200px;
+    height: 200px;
+
+    background: #ff9fa8;
+    box-shadow: 0px 4px #ff7c87;
+    color: white;
+
+}
+button.eval{
+    width: 200px;
+    height: 200px;
+
+    background: #f1ff92;
+    box-shadow: 0px 4px #9da853;
+    color: #888e5f;
+}
+input{
+    height: 200px;
+    width: 850px;
+    margin: 5px;
+
+    padding: 0 10px;
+
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+
+    /* Typography */
+    font-size: 100px;
+    line-height: 40px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    text-align: right;
+    letter-spacing: 1px
 }
 
-#btn {
-background-color: #fb0066;
+button:hover {
+    background: #9c89f6;
+    box-shadow: 0px 4px #6b54d3;
+    color: white;
 }
 
-input[type=button] {
-font-family: 'Orbitron', sans-serif;
-background-color: #64278f;
-color: white;
-border: solid black 0.5px;
-width: 100%;
-border-radius: 5px;
-height: 70%;
-outline: none;
+button.eval:hover {
+    background: #abb850;
+    box-shadow: 0px 4px #717a33;
+    color: #ffffff;
 }
 
-input:active[type=button] {
-background: #e5e5e5;
--webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
--moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-box-shadow: inset 0px 0px 5px #c1c1c1;
+button.reset:hover {
+    background: #f68991;
+    box-shadow: 0px 4px #d3545d;
+    color: white;
+}
+
+button:active {
+    box-shadow: 0px 0px #6b54d3;
+    top: 4px;
+}
+
+button.eval:active {
+    box-shadow: 0px 0px #717a33;
+    top: 4px;
+}
+
+button.reset:active {
+    top: 4px;
+    box-shadow: 0px 0px #d3545d;
 }
